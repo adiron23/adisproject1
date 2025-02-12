@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <RelativeLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:background="#F4C4D5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="371dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="21dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="56dp"
+            android:background="#F3C3D4"
+            android:text="⭐GUESS THE NUMBER⭐"
+            android:textColor="#2D452E"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="#2D452E"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="137dp"
+            android:layout_marginRight="137dp"
+            android:layout_marginBottom="379dp"
+            android:onClick="clickFunction"
+            android:text="SEND"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="391dp"
+            android:layout_height="68dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="9dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="453dp"
+            android:text="can you guess the number?💃💃💃"
+            android:textColor="#2D452E"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/editId"
+            android:layout_width="348dp"
+            android:layout_height="67dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="494dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginRight="22dp"
+            android:ems="10"
+            android:gravity="center"
+            android:textColor="#2D452E"
+            android:hint="ENTER"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="126dp"
+            android:layout_marginRight="126dp"
+            android:layout_marginBottom="95dp"
+            android:onClick="clickFunction"
+            android:text="GUESS"
+            android:backgroundTint="#2D452E"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RadioGroup
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="-247dp"
+            android:layout_marginBottom="434dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1-100"
+                android:textColor="#2D452E" />
+
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="101-200"
+                android:textColor="#2D452E" />
+
+            <RadioButton
+                android:id="@+id/radio3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="201-300"
+                android:textColor="#2D452E" />
+        </RadioGroup>
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
