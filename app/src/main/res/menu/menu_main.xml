@@ -21,4 +21,11 @@
         android:orderInCategory="300"
         />
 
+    <item
+        android:id="@+id/new_item"
+        android:title="Count Down"
+        android:icon="@android:drawable/ic_menu_add"
+        android:orderInCategory="50" />
+
+
 </menu>
