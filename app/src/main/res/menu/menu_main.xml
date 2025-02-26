@@ -6,19 +6,19 @@
     <item
         android:id="@+id/action_login"
         android:title="Login"
-        android:orderInCategory="100"
+        android:orderInCategory="200"
         />
 
     <item
         android:id="@+id/action_register"
         android:title="Register"
-        android:orderInCategory="200"
+        android:orderInCategory="300"
     />
 
     <item
         android:id="@+id/action_start"
         android:title="Start"
-        android:orderInCategory="300"
+        android:orderInCategory="400"
         />
 
     <item
@@ -27,5 +27,10 @@
         android:icon="@android:drawable/ic_menu_add"
         android:orderInCategory="50" />
 
+    <item
+        android:id="@+id/shared_pref"
+        android:title="Shared Preference"
+        android:icon="@android:drawable/ic_menu_add"
+        android:orderInCategory="100" />
 
 </menu>

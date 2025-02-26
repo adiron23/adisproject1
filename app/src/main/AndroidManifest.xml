@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MyFirstApplication"
         tools:targetApi="31">
         <activity
+            android:name=".SharedActivity"
+            android:exported="false" />
+        <activity
             android:name=".NextActivity"
             android:exported="false" />
         <activity
