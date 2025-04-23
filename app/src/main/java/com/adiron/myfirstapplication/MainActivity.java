@@ -1,15 +1,8 @@
 package com.adiron.myfirstapplication;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
@@ -18,9 +11,12 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
 public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
-    Button button, button2, linear, button5, guess;
+    Button button, button2, linear, button5, guess, openCameraBtn;
     TextView tv1;
     Switch s;
     ConstraintLayout constraintLayout;
@@ -42,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         linear = findViewById(R.id.linear);
         button5 = findViewById(R.id.button5);
         guess = findViewById(R.id.guess);
+        openCameraBtn = findViewById(R.id.openCameraBtn);  // הוספתי את הכפתור החדש
 
         tv1 = findViewById(R.id.textView);
         s = findViewById(R.id.s);
@@ -52,12 +49,10 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
         button.setOnClickListener(view -> {
             tv1.setText("so quit");
-            Log.d("Adi", "button1 clicked");
         });
 
         button2.setOnClickListener(view -> {
             tv1.setText("quit today");
-            Log.d("Adi", "button2 clicked");
         });
 
         guess.setOnClickListener(view -> {
@@ -78,6 +73,12 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         button5.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, ButtonActivity.class);
             startActivityForResult(intent, 1);
+        });
+
+        // הוספנו את הפעולה לפתיחת CameraTextActivity
+        openCameraBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, CameraTextActivity.class);
+            startActivity(intent);
         });
 
         s.setOnCheckedChangeListener(this);
@@ -125,32 +126,4 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             s.setText("On");
         }
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main,menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        super.onOptionsItemSelected(item);
-        int id = item.getItemId();
-        if (id == R.id.action_login) {
-            Toast.makeText(this, "you selected login", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.action_register) {
-            Toast.makeText(this, "you selected register", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.action_start) {
-            Toast.makeText(this, "you selected start", Toast.LENGTH_SHORT).show();
-        } else if (item.getItemId() == R.id.new_item) {
-            Intent intent = new Intent(this, NewActivity.class);
-            startActivity(intent);
-        } else if (item.getItemId() == R.id.shared_pref) {
-            Intent intent = new Intent(this, SharedActivity.class);
-            startActivity(intent);
-        }
-        return true;
-    }
 }
-
-
