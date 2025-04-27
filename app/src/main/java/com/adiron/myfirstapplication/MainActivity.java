@@ -16,7 +16,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
-    Button button, button2, linear, button5, guess, openCameraBtn;
+    Button button, button2, linear, button5, guess, openCameraBtn, TextRecBtn;
     TextView tv1;
     Switch s;
     ConstraintLayout constraintLayout;
@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         button5 = findViewById(R.id.button5);
         guess = findViewById(R.id.guess);
         openCameraBtn = findViewById(R.id.openCameraBtn);  // הוספתי את הכפתור החדש
+        TextRecBtn = findViewById(R.id.TextRecBtn);  // הוספתי את הכפתור החדש
 
         tv1 = findViewById(R.id.textView);
         s = findViewById(R.id.s);
@@ -80,6 +81,13 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             Intent intent = new Intent(MainActivity.this, CameraTextActivity.class);
             startActivity(intent);
         });
+
+
+        TextRecBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, TextRec.class);
+            startActivity(intent);
+        });
+
 
         s.setOnCheckedChangeListener(this);
         sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
